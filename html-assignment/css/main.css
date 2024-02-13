@@ -2,3 +2,12 @@ body{
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 18px;
 }
+header footer{
+    background-color:rgb(252, 144, 105);
+}
+#site-title{
+    color:rgb(54, 48, 38);
+}
+.my-image{
+    /* box-shadow: add box shadow; */
+}
