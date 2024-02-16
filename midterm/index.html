@@ -11,6 +11,7 @@
         <img src="images/lone-starfish-wide.jpg" alt="starfish">
         <h1>Lone Starfish</h1>
     </header>
+    <main>
     <article>
         <h2>Life of a Starfish</h2>
         <img src="images/lone-starfish.jpg" alt="stafish" title="starfish">
@@ -27,7 +28,22 @@
     </article>
     <h2>Contact to learn more</h2>
     <form>
-        
+        <label for="name">Your Name</label>
+        <input id="name" type="text" placeholder="name" required>
+
+        <label for="email">Your Email</label>
+        <input id="email" type="text" required>
+
+        <label for="message">Your Message</label>
+        <textarea id="message"></textarea>
+
+        <label for="yes">Would you like to visit the starfish?</label>
+        <input type="radio" name="radio-answer" value="yes">Yes
+        <input type="radio" name="radio-answer" value="no">No
+        <input type="radio" name="radio-answer" value="other">Other
+
+        <button type="submit">submit</button>
     </form>
+    </main>
 </body>
 </html>
