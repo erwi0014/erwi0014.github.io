@@ -1,6 +1,91 @@
 html{
     font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #aad4cf;
 }
 body{
+    background-color: #d4e9e7;
+    margin: 1rem;
+    padding: 1rem;
+}
+/* base styles */
+
+header img{
+    width: 100%;
+}
+header a{
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+/* make this padding spread the whole body */
+header a:link,a:visited{
+    color: black;
+    text-decoration: none;
+}
+header a:hover,a:focus{
     background-color: #aad4cf;
+}
+header a#midlink{
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+/* makes only the middle link have borders */
+h1{
+    font-size: 3rem;
+    color: #FFFFFF;
+    line-height: 2em;
+    text-align: center;
+}
+nav{
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    line-height: 2em;
+    text-align: center;
+}
+/* includes all header styles */
+
+h2{
+    font-size: 2rem;
+    line-height: 2em;
+}
+article img{
+    height: 300px;
+}
+p{
+    font-size: 1rem;
+    line-height: 2em;
+}
+/* article styles */
+
+ul{
+    list-style-type: square;
+    padding: 0.5rem;
+  }
+ul li{
+    margin: 1rem;
+}
+/* includes all list styles */
+
+form{
+    line-height: 1rem;
+    border: solid black 1px;
+    padding: 1rem;
+    margin: 0rem;
+}
+form input{
+    margin: 1rem;
+}
+form textarea{
+    margin: 1rem;
+}
+form button{
+    text-transform: uppercase;
+    background-color: #d4e9e7;
+    padding: 0.5rem;
+}
+/* includes all form styles */
+
+footer{
+    text-align: end;
+    text-transform: capitalize;
 }
