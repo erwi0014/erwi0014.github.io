@@ -43,24 +43,31 @@
     </article>
     <h2 id="contact">Contact to learn more</h2>
     <form>
+        <fieldset>
         <label for="name">Your Name</label>
         <br>
         <input id="name" type="text" placeholder="name" required>
-        <br>
+        </fieldset>
+
+        <fieldset>
         <label for="email">Your Email</label>
         <br>
         <input id="email" type="text" required>
-        <br>
-        <label for="message">Your Message</label>
-        <br>
-        <textarea id="message"></textarea>
-        <br>
-        <label for="radio-answer">Would you like to visit the starfish?</label>
-        <br>
-        Yes<input type="radio" name="radio-answer" value="yes">
-        No<input type="radio" name="radio-answer" value="no">
-        Maybe<input type="radio" name="radio-answer" value="other">
-        <br>
+        </fieldset>
+
+        <fieldset>
+            <label for="message">Your Message</label>
+            <br>
+            <textarea id="message"></textarea>
+        </fieldset>
+
+        <fieldset class="radio">
+            <label for="radio-answer">Would you like to visit the starfish?</label>
+            <br>
+            Yes<input type="radio" name="radio-answer" value="yes">
+            No<input type="radio" name="radio-answer" value="no">
+            Maybe<input type="radio" name="radio-answer" value="other">
+        </fieldset>
         <!-- note: do i keep the label like this? -->
         <button type="submit">send</button>
     </form>

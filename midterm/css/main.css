@@ -19,32 +19,53 @@ html{
 }
 /* base styles above*/
 
+header{
+    width: 1024px;
+    margin: 0 auto;
+    position: relative;
+    text-align: center;
+}
+
 header img{
     width: 100%;
 }
 
 h1{
-    font-size: 3rem;
+    font-size: 4.5rem;
     color: #FFFFFF;
     line-height: 2em;
     text-align: center;
-    position: relative;
-    bottom: 100px;
+    position: absolute;
+    bottom: 88px;
+    left: 50%;
+    transform: translate(-50%);
+    z-index: 1;
 }
 
 nav{
     text-transform: uppercase;
     font-size: 1.5rem;
     line-height: 2em;
-    text-align: center;
-    position: sticky;
+    position: relative;
     width: 100%;
 }
+
 nav li{
     display: inline-block;
-    border-right: 1px solid black;
-    text-align: center;
+    width: 32%;
 }
+nav a{
+    display: inline-block;
+    border-right: 1px solid black;
+    width: 100%;
+}
+/* made the width about a third of the wrapper */
+
+nav ul li:nth-child(3) a{
+    border-right: none;
+}
+/* hide last border */
+
 nav a:link,a:visited{
     color: black;
     text-decoration: none;
@@ -70,7 +91,7 @@ article img{
 
 p{
     font-size: 1rem;
-    line-height: 2em;
+    line-height: 1.5em;
     margin: 10px;
 }
 /* article styles */
@@ -78,9 +99,10 @@ p{
 article ul{
     list-style-type: square;
     padding: 0.5rem;
+    line-height: 1.5rem;
 }
 article ul li{
-    margin: 1rem;
+    margin: 0 2rem;
 }
 /* includes all article list styles */
 
@@ -91,19 +113,28 @@ form{
     margin: 10px;
 }
 form input{
-    margin: 1rem;
+    margin: 1rem 0;
+    border: 0.25px solid #808080;
+    width: 100%;
 }
 form textarea{
-    margin: 1rem;
+    margin: 1rem 0;
+    border: 0.5px solid #808080;
+    width: 100%;
 }
 form button{
     text-transform: uppercase;
     background-color: #d4e9e7;
     padding: 0.5rem;
 }
+form fieldset.radio input{
+    width: auto;
+    margin: 1rem;
+}
 /* includes all form styles */
 
 footer{
-    text-align: end;
+    text-align: right;
     text-transform: capitalize;
+    padding: 1rem;
 }
