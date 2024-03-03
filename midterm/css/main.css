@@ -112,6 +112,9 @@ form{
     padding: 1rem;
     margin: 10px;
 }
+fieldset{
+    margin: 1rem 0;
+}
 form input{
     margin: 1rem 0;
     border: 0.25px solid #808080;
@@ -122,14 +125,18 @@ form textarea{
     border: 0.5px solid #808080;
     width: 100%;
 }
+form h3{
+    font-size: 1.3rem;
+    margin: 1rem 0;
+}
+form input[name="visit"]{
+    margin: 0.5rem;
+    width: auto;
+}
 form button{
     text-transform: uppercase;
     background-color: #d4e9e7;
     padding: 0.5rem;
-}
-form fieldset.radio input{
-    width: auto;
-    margin: 1rem;
 }
 /* includes all form styles */
 
@@ -137,4 +144,5 @@ footer{
     text-align: right;
     text-transform: capitalize;
     padding: 1rem;
+    margin: 1rem;
 }
