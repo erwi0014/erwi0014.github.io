@@ -20,8 +20,8 @@ html{
 /* base styles above*/
 
 header{
-    width: 1024px;
-    margin: 0 auto;
+    width: auto;
+    margin: 0;
     position: relative;
     text-align: center;
 }
@@ -34,7 +34,6 @@ h1{
     font-size: 4.5rem;
     color: #FFFFFF;
     line-height: 2em;
-    text-align: center;
     position: absolute;
     bottom: 88px;
     left: 50%;
@@ -46,7 +45,6 @@ nav{
     text-transform: uppercase;
     font-size: 1.5rem;
     line-height: 2em;
-    position: relative;
     width: 100%;
 }
 
