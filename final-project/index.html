@@ -10,11 +10,11 @@
 <body>
     <header>
         <nav>
-            <div class="logoContainer">
-            <img id="logo" src="images/logo.png" alt="Three star logo">
-            </div>
-            <!-- company logo, for mobile make background stretch -->
+            <!-- did everything as li -->
             <ul>
+                <li>
+                    <img id="logo" src="images/logo.png" alt="Three star logo">
+                </li>
                 <li>
                     <a href="#home">Home</a>
                 </li>
@@ -30,14 +30,16 @@
                 <li>
                     <a href="#contact">Contact</a>
                 </li>
+                <li>
+                    <form class="search">
+                        <!-- add action -->
+                        <!-- searchbar -->
+                        <input type="text" placeholder="Search">
+                        <button type="submit">BTN</button>
+                        <!-- add search glyph -->
+                    </form>
+                </li>
             </ul>
-            <form class="search">
-                <!-- add action -->
-                <!-- searchbar -->
-                <input type="text" placeholder="Search">
-                <button type="submit">BTN</button>
-                <!-- add search glyph -->
-            </form>
         </nav>
         <section id="home">
             <img src="images/main-banner.jpg" alt="Employees at work">
@@ -53,9 +55,9 @@
             </article>
         </section>
     </header>
-    <div class="container">
-        <main>
-            <section id="about">
+    <main>
+        <section id="about">
+            <div class="sectionContainer">
                 <img src="images/about-us.jpg" alt="Ping pong table">
                 <article>
                     <h1>
@@ -68,145 +70,157 @@
                         Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nostrum inventore eos excepturi dolorem illum vel voluptate. Doloremque, atque aperiam, non deleniti, reprehenderit ad rerum eveniet error exercitationem quibusdam dolorum minus!
                     </p>
                 </article>
-            </section>
-            <!-- all services are articles under this section -->
-            <section id="services">
+            </div>
+        </section>
+        <!-- all services are articles under this section -->
+        <section id="services">
+            <div class="sectionContainer">
                 <h1>
                     Our Services
                 </h1>
                 <article id="digital">
                     <img src="images/digital.jpg" alt="Working on laptop">
-                    <h2>
-                        Digital Transformation
-                    </h2>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam aliquid earum perferendis quidem laboriosam quaerat rerum exercitationem debitis nemo, temporibus minus, assumenda beatae eum sequi iusto optio voluptatem velit recusandae!
-                    </p>
-                    <a>Digital Plans</a>
-                    <!-- add glyph -->
+                    <div id="digitalText">
+                        <h2>
+                            Digital Transformation
+                        </h2>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam aliquid earum perferendis quidem laboriosam quaerat rerum exercitationem debitis nemo, temporibus minus, assumenda beatae eum sequi iusto optio voluptatem velit recusandae!
+                        </p>
+                        <a>Digital Plans</a>
+                        <!-- add glyph -->
+                    </div>
                 </article>
                 <article id="marketing">
                     <img src="images/marketing.jpg" alt="Laptop screen">
-                    <h2>
-                        Marketing
-                    </h2>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam aliquid earum perferendis quidem laboriosam quaerat rerum exercitationem debitis nemo, temporibus minus, assumenda beatae eum sequi iusto optio voluptatem velit recusandae!
-                    </p>
-                    <a>Marketing Plans</a>
-                    <!-- add glyph -->
+                    <div id="marketingText">
+                        <h2>
+                            Marketing
+                        </h2>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam aliquid earum perferendis quidem laboriosam quaerat rerum exercitationem debitis nemo, temporibus minus, assumenda beatae eum sequi iusto optio voluptatem velit recusandae!
+                        </p>
+                        <a>Marketing Plans</a>
+                        <!-- add glyph -->
+                    </div>
                 </article>
                 <article id="video">
                     <img src="images/video.jpg" alt="Youtube app">
-                    <h2>
-                        Video Production
-                    </h2>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam aliquid earum perferendis quidem laboriosam quaerat rerum exercitationem debitis nemo, temporibus minus, assumenda beatae eum sequi iusto optio voluptatem velit recusandae!
-                    </p>
-                    <a>Video Plans</a>
-                    <!-- add glyph -->
+                    <div id="videoText">
+                        <h2>
+                            Video Production
+                        </h2>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam aliquid earum perferendis quidem laboriosam quaerat rerum exercitationem debitis nemo, temporibus minus, assumenda beatae eum sequi iusto optio voluptatem velit recusandae!
+                        </p>
+                        <a>Video Plans</a>
+                        <!-- add glyph -->
+                    </div>
                 </article>
                 <article id="webDev">
                     <img src="images/web.jpg" alt="Smartphone on binder">
-                    <h2>
-                        Web Development
-                    </h2>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam aliquid earum perferendis quidem laboriosam quaerat rerum exercitationem debitis nemo, temporibus minus, assumenda beatae eum sequi iusto optio voluptatem velit recusandae!
-                    </p>
-                    <a>Web Plans</a>
-                    <!-- add glyph -->
+                    <div id="webText">
+                        <h2>
+                            Web Development
+                        </h2>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam aliquid earum perferendis quidem laboriosam quaerat rerum exercitationem debitis nemo, temporibus minus, assumenda beatae eum sequi iusto optio voluptatem velit recusandae!
+                        </p>
+                        <a>Web Plans</a>
+                        <!-- add glyph -->
+                    </div>
                 </article>
                 <article id="print">
                     <img src="images/print.jpg" alt="News stands">
-                    <h2>
-                        Print
-                    </h2>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam aliquid earum perferendis quidem laboriosam quaerat rerum exercitationem debitis nemo, temporibus minus, assumenda beatae eum sequi iusto optio voluptatem velit recusandae!
-                    </p>
-                    <a>Print Plans</a>
-                    <!-- add glyph -->
+                    <div id="printText">
+                        <h2>
+                            Print
+                        </h2>
+                        <p>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Totam aliquid earum perferendis quidem laboriosam quaerat rerum exercitationem debitis nemo, temporibus minus, assumenda beatae eum sequi iusto optio voluptatem velit recusandae!
+                        </p>
+                        <a>Print Plans</a>
+                        <!-- add glyph -->
+                    </div>
                 </article>
-            </section>
-            <section id="vision">
-                <img src="images/vision.jpg" alt="Paper boats">
-                <article>
-                    <h2>
-                        Our Vision
-                    </h2>
-                    <p>
-                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. In, esse ea similique id quo sequi, perspiciatis eos aliquam nihil error officia. Cum quis assumenda autem eaque debitis, porro esse nemo?
-                    </p>
-                    <a>Learn More</a>
-                    <!-- add glyph -->
-                </article>
-            </section>
-            <section id="team">
-                <h1>
-                    Our Team
-                </h1>
-                <img src="images/john.jpg" alt="Man standing on graffiti background">
-                <article>
-                    <h2>
-                        John Doe
-                    </h2>
-                    <h3>
-                        CEO and Co-owner
-                    </h3>
-                    <br>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere temporibus nesciunt reprehenderit incidunt blanditiis voluptatem dolor? Rerum veniam iure saepe assumenda quod animi, harum dignissimos dicta, perferendis eos, iusto quo.
-                    </p>
-                </article>
-                <img src="images/bob.jpg" alt="Man sitting on brick background">
-                <article>
-                    <h2>
-                        Bob Rite
-                    </h2>
-                    <h3>
-                        CFO and Co-owner
-                    </h3>
-                    <br>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere temporibus nesciunt reprehenderit incidunt blanditiis voluptatem dolor? Rerum veniam iure saepe assumenda quod animi, harum dignissimos dicta, perferendis eos, iusto quo.
-                    </p>
-                </article>
-            </section>
-            <section id="contact">
-                <h1>
-                    Contact Us
-                </h1>
-                <!-- contact form as follows -->
-                <form>
-                <!-- add action -->
-                    <fieldset>
-                        <h2>Send us a message</h2>
-                    </fieldset>
-                    
-                    <label for="name">Full Name</label>
-                    <input id="name" name="name" type="text">
+            </div>
+        </section>
+        <section id="vision">
+            <img src="images/vision.jpg" alt="Paper boats">
+            <article>
+                <h2>
+                    Our Vision
+                </h2>
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. In, esse ea similique id quo sequi, perspiciatis eos aliquam nihil error officia. Cum quis assumenda autem eaque debitis, porro esse nemo?
+                </p>
+                <a>Learn More</a>
+                <!-- add glyph -->
+            </article>
+        </section>
+        <section id="team">
+            <h1>
+                Our Team
+            </h1>
+            <img src="images/john.jpg" alt="Man standing on graffiti background">
+            <article>
+                <h2>
+                    John Doe
+                </h2>
+                <h3>
+                    CEO and Co-owner
+                </h3>
+                <br>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere temporibus nesciunt reprehenderit incidunt blanditiis voluptatem dolor? Rerum veniam iure saepe assumenda quod animi, harum dignissimos dicta, perferendis eos, iusto quo.
+                </p>
+            </article>
+            <img src="images/bob.jpg" alt="Man sitting on brick background">
+            <article>
+                <h2>
+                    Bob Rite
+                </h2>
+                <h3>
+                    CFO and Co-owner
+                </h3>
+                <br>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Facere temporibus nesciunt reprehenderit incidunt blanditiis voluptatem dolor? Rerum veniam iure saepe assumenda quod animi, harum dignissimos dicta, perferendis eos, iusto quo.
+                </p>
+            </article>
+        </section>
+        <section id="contact">
+            <h1>
+                Contact Us
+            </h1>
+            <!-- contact form as follows -->
+            <form>
+            <!-- add action -->
+                <fieldset>
+                    <h2>Send us a message</h2>
+                </fieldset>
+                
+                <label for="name">Full Name</label>
+                <input id="name" name="name" type="text">
 
-                    <label for="email">Email</label>
-                    <input id="email" name="email" type="text">
+                <label for="email">Email</label>
+                <input id="email" name="email" type="text">
 
-                    <label for="message">Message</label>
-                    <textarea id="message" name="message" rows="5"></textarea>
+                <label for="message">Message</label>
+                <textarea id="message" name="message" rows="5"></textarea>
 
-                    <button type="submit">Send</button>
-                </form>
-                <article>
-                    <h2>Hours of operation</h2>
-                    <!-- gotta make a table here -->
-                </article>
-                <article>
-                    <h2>Location</h2>
-                    <!-- gotta make a maps link right here -->
-                </article>
-            </section>
-        </main>
-    </div>
+                <button type="submit">Send</button>
+            </form>
+            <article>
+                <h2>Hours of operation</h2>
+                <!-- gotta make a table here -->
+            </article>
+            <article>
+                <h2>Location</h2>
+                <!-- gotta make a maps link right here -->
+            </article>
+        </section>
+    </main>
     <footer>
         <p>
             &copy; Copywrite Three Star Media, 2020

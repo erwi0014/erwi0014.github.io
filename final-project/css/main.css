@@ -7,6 +7,15 @@ html{
     font-size: 19px;
 }
 
+/* temporary for mobile styling */
+body{
+    width: 400px;
+    margin: auto;
+}
+img{
+    width: 100%;
+}
+
 /* headers */
 h1{
     font-size: 2rem;
@@ -24,46 +33,91 @@ nav{
     color: #c78b07;
     text-align: center;
 }
-nav div.logoContainer{
-    background-color: #c78b07;
-}
+
 /* logo */
 nav img{
     display: block;
     width: 100px;
 }
-nav ul li{
-    display: block;
-    width: 100%;
-}
-nav a{
-    color: #c78b07;
-    width: 100%;
-}
-nav a:active, a:hover, a:focus{
+nav li:hover{
     background-color: #c78b07;
     color: #222;
 }
-nav form#search{
-    display: flex;
-    width: 100%;
+a{
+    color: inherit;
+    text-decoration: inherit;
 }
-/* style header */
-section#home{
-    width: 400px;
-}
+
+/* style home section */
 section#home article{
     position: relative;
+    width: 400px;
     bottom: 250px;
     color: #FFF;
     background: rgba(34, 34, 34, 0.7);
 }
 
-
-/* set up container */
-body div.container{
-    width: 400px;
+section#about{
+    background-color: beige;
 }
-img{
-    width: 100%;
+
+@media screen and (min-width:800px){
+    body{
+        width: 100%;
+    }
+    section#home article{
+        width: 800px;
+        margin: auto;
+    }
+    nav ul{
+        display: flex;
+        flex-direction: row;
+        width: 800px;
+        margin: auto;
+    }
+    section#about .sectionContainer{
+        display: flex;
+        width: 800px;
+        margin: auto;
+        gap: 1rem;
+    }
+    section#about .sectionContainer img {
+        flex-basis: 50%; 
+        max-width: 40%;
+    }
+      
+    section#about .sectionContainer article {
+        flex-basis: 50%; 
+    }
+    
+    section#services .sectionContainer{
+        width: 800px;
+        margin: auto;
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-auto-rows: auto;
+        grid-template-areas: 
+        "head head head head head head"
+        "digital digital digital marketing marketing marketing"
+        "video video web web print print";
+    }
+    
+    section#services .sectionContainer > h1{
+        grid-area: head;
+    }
+    #digital{
+        grid-area: digital;
+    }
+    #marketing{
+        grid-area: marketing;
+    }
+    #video{
+        grid-area: video;
+    }
+    #webDev{
+        grid-area: web;
+    }
+    #print{
+        grid-area: print;
+    }
 }
