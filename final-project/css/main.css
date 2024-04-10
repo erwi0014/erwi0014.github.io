@@ -26,13 +26,13 @@ svg{
 
 /* beginsfont styling */
 h1{
-    font-size: 4rem; /* 4 * 19 = 76px */
+    font-size: 3rem; /* 4 * 19 = 76px */
     line-height: 1.3; 
     font-weight: 700;
 }
 h2{
     font-size: 2rem; /* 1.5 * 19 = 28.5px */
-    font-weight: 600;
+    font-weight: 700;
     line-height: 1.6;
 }
 h3{
@@ -40,10 +40,16 @@ h3{
     font-weight: 600;
     line-height: 1.8;
 }
+h4{
+    font-size: 1.3rem; /* 1.3 * 19 = 25px */
+    font-weight: 600;
+    line-height: 1.8;
+}
 p{
     font-size: 1rem; /* 1 * 19 = 19px */
     font-weight: 400;
     line-height: 1.5;
+    margin: 1rem 0;
 }
 
 /* begins nav styling */
@@ -52,6 +58,7 @@ nav{
     color: var(--custom-orange);
     text-align: center;
     padding: 1rem;
+    font-size: 1.3rem;
 }
 
 /* creates flex layout */
@@ -70,8 +77,8 @@ nav img{
 
 /* begins styling buttons */
 nav li:hover{
-    background-color: #c78b07;
-    color: #222;
+    background-color: var(--custom-orange);
+    color: var(--custom-grey);
 }
 a{
     color: inherit;
@@ -80,33 +87,199 @@ a{
 
 /* begins styling search field */
 form.search input[type=text] {
-    padding: 10px;
-    font-size: 17px;
+    padding: 1rem;
+    font-size: 1.3rem;
     border: 1px solid grey;
     float: left;
     width: 80%;
-    background: #f1f1f1;
+    background: white;
 }
 /* styles the submit button */
 form.search button {
     float: left;
     width: 20%;
-    padding: 10px;
+    padding: 1rem;
     background: var(--custom-grey);
     color: var(--custom-orange);
-    font-size: 17px;
+    font-size: 1.3rem;
     border: 1px solid var(--custom-orange);
 }
 
 /* begins styling home section */
-section#home div.wrapper{
+#home img{
+    display: none;
+}
+
+#home {
+    background-image: url("../images/main-banner.jpg"); /* The image used */
+    background-color: #cccccc; /* Used if the image is unavailable */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+    padding: 4rem 0;
+}
+
+#home div.wrapper{
     width: 100%;
     position: relative;
-    bottom: 200px;
+    top: 10%;
+    margin: 2rem 0;
     color: white;
-    background-color: var(--custom-grey);
+    background-color: rgba(34, 34, 34, 0.75);
 }
-section#home div.wrapper article{
+
+#home div.wrapper article{
+    width: 100%;
+    margin: auto;
+    padding: 1rem;
+}
+
+/* starts link styling */
+#home a{
+    display: inline-block;
+    background-color: var(--custom-orange);
+    padding: 1rem;
+    margin: 1rem 0;
+    color: black;
+    font-size: 1.3rem;
+    border: solid var(--custom-orange) 1px;
+}
+#home a i{
+    padding: 1rem;
+}
+#home a:hover{
+    border: solid var(--custom-grey) 1px;
+}
+
+/* starts about us section styling */
+#about{
+    background-color: var(--custom-beige);
+}
+#about div.wrapper{
+    padding: 1rem;
+}
+#about img{
+    width: 100%;
+}
+
+/* starts styling our services section */
+#services div.wrapper{
+    padding: 1rem;
+}
+#services div.wrapper article{
+    margin: 1rem 0;
+    background-color: var(--custom-beige);
+}
+#services div.wrapper article div{
+    padding: 1rem;
+}
+#services div.wrapper article img{
+    width: 100%;
+}
+#services div.wrapper article a{
+    display: inline-block;
+    background-color: var(--custom-grey);
+    padding: 1rem;
+    margin: 1rem 0;
+    color: white;
+    font-size: 1.3rem;
+    border: solid var(--custom-grey) 1px;
+}
+#services div.wrapper article a i{
+    padding: 1rem;
+}
+#services div.wrapper article a:hover{
+    border: solid var(--custom-orange) 1px;
+}
+
+/* starts styling our vision section */
+#vision img{
+    display: none;
+}
+#vision{
+    color: white;
+    position: relative;
+    background-image: url("../images/vision.jpg"); /* The image used */
+    background-color: #cccccc; /* Used if the image is unavailable */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+    padding: 2rem 0;
+}
+#vision article{
+    position: relative;
+    padding: 1rem;
+}
+#vision a{
+    display: inline-block;
+    background-color: rgba(34, 34, 34, 0.7);
+    padding: 1rem;
+    margin: 1rem 0;
+    color: white;
+    font-size: 1.3rem;
+    border: solid var(--custom-beige) 1px;
+}
+#vision a i{
+    padding: 1rem;
+}
+#vision a:hover{
+    border: solid var(--custom-grey) 1px;
+}
+
+/* starts styling our team section */
+#team div.wrapper{
+    padding: 1rem;
+}
+#team div.wrapper article{
+    margin: 1rem 0;
+    background-color: var(--custom-beige);
+}
+#team div.wrapper article div{
+    padding: 1rem;
+}
+#team div.wrapper article img{
+    width: 100%;
+}
+#team div.wrapper article div h4{
+    border-bottom: solid 2px var(--custom-orange);
+}
+
+/* starts styling contact section */
+#contact div.wrapper{
+    padding: 1rem;
+    margin: auto;
+    padding: 1rem;
+}
+#contact form input, textarea{
+    display: block;
     width: 100%;
     padding: 1rem;
+}
+
+#contact table{
+    width: 100%;
+}
+#contact table caption{
+    text-align: left;
+}
+#contact table thead, tbody, tr, th, td{
+    border: 1px solid var(--custom-grey);
+    padding: 1rem;
+}
+#contact table thead{
+    background-color: var(--custom-beige);
+    text-align: center;
+}
+
+#contact iframe{
+    width: 100%;
+}
+
+footer{
+    background-color: var(--custom-grey);
+    color: var(--custom-orange);
+}
+
+footer a{
+    text-decoration: underline;
 }
