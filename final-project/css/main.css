@@ -3,8 +3,110 @@
 *::after{
     box-sizing: border-box;
 }
+
 html{
     font-size: 19px;
-    font-family: "Noto Sans", sans-serif;
+    font-family: "Open Sans", sans-serif;
+}
+
+:root{
+    --custom-orange: #c78c06;
+    --custom-beige: #ffe6ac;
+    --custom-grey: #222;
+} /* sets up custom colours to use with var() property */
+
+img{
+    max-width: 100%;
+    height: auto;
+}
+
+svg{
+    width: 50px; 
+} /* makes svg small for the time being */
+
+/* beginsfont styling */
+h1{
+    font-size: 4rem; /* 4 * 19 = 76px */
+    line-height: 1.3; 
+    font-weight: 700;
+}
+h2{
+    font-size: 2rem; /* 1.5 * 19 = 28.5px */
+    font-weight: 600;
+    line-height: 1.6;
+}
+h3{
+    font-size: 1.5rem; /* 1.3 * 19 = 25px */
+    font-weight: 600;
+    line-height: 1.8;
+}
+p{
+    font-size: 1rem; /* 1 * 19 = 19px */
     font-weight: 400;
+    line-height: 1.5;
+}
+
+/* begins nav styling */
+nav{
+    background-color: var(--custom-grey);
+    color: var(--custom-orange);
+    text-align: center;
+    padding: 1rem;
+}
+
+/* creates flex layout */
+nav ul{
+    display: flex;
+    flex-direction: column;
+}
+nav ul li{
+    padding: 1rem;
+}
+
+nav img{
+    display: block;
+    width: 100px;
+} /* logo styles */
+
+/* begins styling buttons */
+nav li:hover{
+    background-color: #c78b07;
+    color: #222;
+}
+a{
+    color: inherit;
+    text-decoration: inherit;
+}
+
+/* begins styling search field */
+form.search input[type=text] {
+    padding: 10px;
+    font-size: 17px;
+    border: 1px solid grey;
+    float: left;
+    width: 80%;
+    background: #f1f1f1;
+}
+/* styles the submit button */
+form.search button {
+    float: left;
+    width: 20%;
+    padding: 10px;
+    background: var(--custom-grey);
+    color: var(--custom-orange);
+    font-size: 17px;
+    border: 1px solid var(--custom-orange);
+}
+
+/* begins styling home section */
+section#home div.wrapper{
+    width: 100%;
+    position: relative;
+    bottom: 200px;
+    color: white;
+    background-color: var(--custom-grey);
+}
+section#home div.wrapper article{
+    width: 100%;
+    padding: 1rem;
 }
