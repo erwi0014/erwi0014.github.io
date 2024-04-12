@@ -93,13 +93,13 @@ form.search input[type=text] {
     font-size: 1.5rem;
     border: 1px solid grey;
     float: left;
-    width: 90%;
+    width: 80%;
     background: white;
 }
 /* styles the submit button */
 form.search button {
     float: left;
-    width: 10%;
+    width: 20%;
     padding: 1rem;
     background: var(--custom-grey);
     color: var(--custom-orange);
@@ -303,7 +303,73 @@ footer a{
 
 /* begins media query */
 @media screen and (min-width:750px){
+    /* begins styling nav */
+    nav{
+        width: 100%;
+    }
     nav ul{
         flex-direction: row;
+        flex-wrap: none;
+        justify-content: space-between;
+        align-items: center; /* Vertical centering */
+        font-size: 1rem;
     }
+    nav ul li{
+        flex-grow: 1;
+    }
+    nav ul li:nth-child(1){
+        flex-grow: 0;
+    }
+    nav ul li:nth-child(7){
+        flex-grow: 0;
+    }
+    nav img{
+        width: 100px;
+        padding: 0;
+        margin: 0;
+    }
+    /* form styling */
+    form.search{
+        width: 100%;
+    }
+    form.search input[type=text]{
+        max-width: 80%;
+        font-size: 1rem;
+    }
+    form.search button{
+        width: 20%;
+        font-size: 1rem;
+    }
+    /* begins styling home */
+    /* #home{
+        background-image: none;
+    }
+    #home img{
+        display: block;
+        position: relative;
+        width: 100%;
+    }
+    #home div.wrapper{
+        position: absolute;
+        top: 250px;
+    } */
+
+    /* begins styling about section */
+    /* #about div.wrapper{
+        display: flex;
+        align-items: stretch;
+        overflow: hidden;
+    }
+    #about div.wrapper img{
+        flex: 1;
+        object-fit: contain; 
+    }
+    #about .wrapper article{
+        flex: 1;
+    } */
+    #about .wrapper img{
+        float: left;
+        width: 50%;
+    }
+    /* have to figure out how to do it with flex vs float and see which is better */
 }
