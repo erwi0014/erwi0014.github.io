@@ -176,6 +176,7 @@ form.search button {
 #services div.wrapper article img{
     width: 100%;
 }
+/* link styles */
 #services div.wrapper article a{
     display: inline-block;
     background-color: var(--custom-grey);
@@ -227,6 +228,9 @@ form.search button {
 }
 
 /* starts styling our team section */
+#team div.wrapper > img{
+    display: none;
+}/* hides the extra image */
 #team div.wrapper{
     padding: 1rem;
 }
@@ -294,15 +298,20 @@ form.search button {
 footer{
     background-color: var(--custom-grey);
     color: var(--custom-orange);
+}
+footer div.wrapper{
     padding: 1rem;
 }
-
 footer a{
     text-decoration: underline;
 }
 
 /* begins media query */
-@media screen and (min-width:750px){
+@media print, screen and (min-width:750px){
+    /* sets new rem */
+    html{
+        font-size: 16px;
+    }
     /* begins styling nav */
     nav{
         width: 100%;
@@ -341,35 +350,169 @@ footer a{
         font-size: 1rem;
     }
     /* begins styling home */
-    /* #home{
+    #home{
         background-image: none;
+        background-color: var(--custom-grey);
+        position: relative;
+        padding: 0;
     }
     #home img{
-        display: block;
-        position: relative;
+        display: block; /* shows image */
         width: 100%;
+        height: 500px;
+        object-fit: cover; 
     }
     #home div.wrapper{
         position: absolute;
-        top: 250px;
-    } */
+        width: 100%;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    #home div.wrapper article{
+        margin: auto;
+        max-width: 1200px;
+    }
 
     /* begins styling about section */
-    /* #about div.wrapper{
+    #about div.wrapper{
         display: flex;
         align-items: stretch;
-        overflow: hidden;
+        width: 100%;
+        justify-content: space-between;
     }
     #about div.wrapper img{
-        flex: 1;
-        object-fit: contain; 
+        object-fit: cover; 
+        width: 48%;
     }
     #about .wrapper article{
-        flex: 1;
-    } */
-    #about .wrapper img{
-        float: left;
-        width: 50%;
+        width: 48%;
     }
-    /* have to figure out how to do it with flex vs float and see which is better */
+    
+    /* begins setting up grid layout in services section*/
+    #services div.wrapper{
+        display: grid;
+        grid-template-columns: repeat(6, 1fr);
+        grid-gap: 0.5rem;
+        grid-template-areas: 
+        "head head head head head head"
+        "dig dig dig mrk mrk mrk"
+        "vid vid web web pnt pnt";
+    }
+    #services h2{
+        grid-area: head;
+    }
+    #services article#digital{
+        grid-area: dig;
+    }
+    #services article#marketing{
+        grid-area: mrk;
+    }
+    #services article#video{
+        grid-area: vid;
+    }
+    #services article#webDev{
+        grid-area: web;
+    }
+    #services article#print{
+        grid-area: pnt;
+    }
+    #services div.wrapper article{
+        margin: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    #services div.wrapper article a{
+        width: 100%;
+        text-align: center;
+        margin: 0;
+    }
+    /* begins styling our team section */
+    #team div.wrapper{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: 
+        "head head"
+        "img1 art1"
+        "art2 img2";
+    }
+    #team div.wrapper article > img{
+        display: none;
+    }/* hides the article image */
+    #team div.wrapper > img{
+        display: block;
+    }/* shows the image outside of article */  
+    /* sets up grid areas */
+    #team div.wrapper h2{
+        grid-area: head;
+    }  
+    #team div.wrapper > img.john{
+        grid-area: img1;
+    }
+    #team div.wrapper > img.bob{
+        grid-area: img2;
+    }
+    #team div.wrapper article.john{
+        grid-area: art1;
+    }
+    #team div.wrapper article.bob{
+        grid-area: art2;
+    }
+    #team div.wrapper article{
+        height: 100%;
+        margin: 0;
+    }
+    #team div.wrapper img{
+        height: 100%;
+        object-fit: cover; 
+    }
+    
+    /* begins styling contact us section */
+    #contact div.wrapper{
+        display: grid;
+        grid-gap: 1rem;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: 
+        "head head"
+        "msg lctn"
+        "hrs hrs";
+    }
+    /* sets up grid areas */
+    #contact div.wrapper h2{
+        grid-area: head;
+    }  
+    #contact div.wrapper form#contactform{
+        grid-area: msg;
+    }
+    #contact div.wrapper article#hrs{
+        grid-area: hrs;
+    }
+    #contact div.wrapper article#lctn{
+        grid-area: lctn;
+    }
+    #contact div.wrapper > *{
+        margin: 0;
+    }
+}
+/* hide nav when printing, other print styles */
+@media print{
+    *, *::after, *::before{
+        color: black;
+    }
+    nav{
+        display: none;
+    }
+    #home .wrapper article{
+        background-color: white;
+    }
+    #home a{
+        display: none;
+    }
+    #services .wrapper article div a{
+        display: none;
+    }
+    #vision{
+        display: none;
+    }
 }
