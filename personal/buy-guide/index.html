@@ -1,68 +1,110 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Buy Guide</title>
-    <link rel="stylesheet" href="css/main.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Buy Guide</title>
+<link href="css/main.css" rel="stylesheet">
 </head>
 <body>
-    <div class="wrapper">
-        <h1>Buy Guide</h1>
-        <form action="pull">
-            <div class="q">
-                <p>Have I thought about it for at least two weeks?</p>
-                <div class="inputcontainer">
-                    <label class="container">Yes
-                        <input type="radio" name="tht">
-                        <span class="checkmark"></span>
-                    </label>
-                    <label class="container">No
-                        <input type="radio" name="tht">
-                        <span class="checkmark"></span>
-                    </label>
-                </div>
-            </div>
-            <div class="q">
-                <p>Does it solve a problem I've genuinely noticed?</p>
-                <div class="inputcontainer">
-                    <label class="container">Yes
-                        <input type="radio" name="prb">
-                        <span class="checkmark"></span>
-                    </label>
-                    <label class="container">No
-                        <input type="radio" name="prb">
-                        <span class="checkmark"></span>
-                    </label>
-                </div>
-            </div>
-            <div class="q">
-                <p>Question 3</p>
-                <div class="inputcontainer">
-                    <label class="container">Yes
-                        <input type="radio" name="q3">
-                        <span class="checkmark"></span>
-                    </label>
-                    <label class="container">No
-                        <input type="radio" name="q3">
-                        <span class="checkmark"></span>
-                    </label>
-                </div>
-            </div>
-            <div class="q">
-                <p>Question 4</p>
-                <div class="inputcontainer">
-                    <label class="container">Yes
-                        <input type="radio" name="q4">
-                        <span class="checkmark"></span>
-                    </label>
-                    <label class="container">No
-                        <input type="radio" name="q4">
-                        <span class="checkmark"></span>
-                    </label>
-                </div>
-            </div>
-        </form>
-    </div>
-    </body>
+    <main>
+        <header>
+            <h1>Buy Guide</h1>
+        </header>
+        <div class="wrapper">
+            <form id="quizForm">
+                <ul id="questionsList">
+                    <!-- Questions will be dynamically added here -->
+                </ul>
+                <button type="submit">Submit</button>
+                <div id="resultMessage"></div> <!-- Result message container -->
+            </form>
+        </div>
+    </main>
+    <footer>
+        <p>&copy;JorynE Designs</p>
+    </footer>
+    <script>
+        // Question bank
+        const questions = [
+            "Have I thought about it for at least two weeks?",
+            "Does it solve a problem I've noticed?",
+            "Do I not own anything similar?",
+            "Is buying it worth losing progress on my financial goal?",
+            "Where will it still be in my possession in 5 years?",
+            "Do I have a place to put it?",
+            "Can I reasonably lose twice the cost without financial strain?",
+            "Would I have to work a significant number of hours to pay this off?",
+            "Can I be happy and productive without it?",
+            "Is this good quality?",
+            "Is this still an impulsive decision?",
+            // Add more questions here
+        ];
+
+        // Function to display questions
+        function displayQuestions() {
+            const questionsList = document.getElementById("questionsList");
+            questions.forEach(question => {
+                const listItem = document.createElement("li");
+                const span = document.createElement("span");
+                span.textContent = question;
+                listItem.appendChild(span);
+                
+                // Create a div to contain Yes/No radio buttons
+                const yesNoContainer = document.createElement("div");
+
+                // Create Yes radio button
+                const yesInput = document.createElement("input");
+                yesInput.type = "radio";
+                yesInput.name = question;
+                yesInput.value = "yes";
+                yesInput.required = true; // Add this line to make it required 
+                yesNoContainer.appendChild(yesInput);
+                yesNoContainer.appendChild(document.createTextNode("Yes"));
+
+
+                // Create No radio button
+                const noInput = document.createElement("input");
+                noInput.type = "radio";
+                noInput.name = question;
+                noInput.value = "no";                
+                noInput.required = true; // Add this line to make it required
+                yesNoContainer.appendChild(noInput);
+                yesNoContainer.appendChild(document.createTextNode("No"));
+
+                // Append Yes/No container to list item
+                listItem.appendChild(yesNoContainer);
+
+                questionsList.appendChild(listItem);
+            });
+        }
+
+        // Function to calculate the result
+        function calculateResult() {
+            const form = document.getElementById("quizForm");
+            const yesInputs = form.querySelectorAll('input[value="yes"]:checked');
+            const noInputs = form.querySelectorAll('input[value="no"]:checked');
+            const yesCount = yesInputs.length;
+            const noCount = noInputs.length;
+            return yesCount - noCount;
+        }
+
+        // Function to display the result message
+        function displayResultMessage() {
+            const result = calculateResult();
+            const resultMessage = document.getElementById("resultMessage");
+            resultMessage.textContent = result < 0 ? "Go ahead!" : "Do not buy!";
+        }
+
+        // Event listener for form submission
+        document.getElementById("quizForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent default form submission
+            displayResultMessage(); // Calculate and display result message
+        });
+
+        // Call the function to display questions
+        displayQuestions();
+    </script>
+
+</body>
 </html>

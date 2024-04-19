@@ -1,3 +1,12 @@
+:root{
+    --background: #fff2db;
+    --background-lighter: #fff8eb;
+    --background-darker: #ccc1af;
+    --accent: #b38d97;
+    --accent-lighter: #d9abb7;
+    --accent-darker: #80646b;
+    --text: #424B54;
+}
 *,
 *:before,
 *:after {
@@ -6,26 +15,96 @@
 html{
     font-size: 20px;
     font-family: Arial, Helvetica, sans-serif;
+    color: var(--text);
 }
-div.wrapper{
-    width: 1000px;
+body{
+    background-color: var(--background-lighter);
+}
+.wrapper{
+    max-width: 1000px;
     margin: 0 auto;
-    background-color: bisque;
+    background-color: var(--background);
+    padding: 1rem;
+}
+header{
+    background-color: var(--accent);
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 1rem;
 }
 h1{
     text-align: center;
     padding: 1rem;
+    color: var(--background);
 }
-div.q{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    align-items: center;
+ul{
+    padding: 0;
 }
-p{
+li{
+    list-style: none;
+    position: relative;
     padding: 1rem;
+    width: 100%;
 }
-label{
-    font-size: 1rem;
-    padding: 0.5rem;
+li span{
+    width: 75%;
+    display: inline-block;
+    margin-right: auto;
+}
+/* style input buttons */
+li div{
+    min-width: 25%;
+    margin-left: auto;
+    display: inline-flex;
+    justify-content: space-evenly;
+}
+button{
+    background-color: var(--background-darker);
+    color: var(--background);
+    padding: 1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border: solid 5px var(--background-darker);
+    border-radius: 1rem;
+    min-width: 25%;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+}
+button:hover {
+    background-color: var(--background); 
+    color: var(--background-darker);
+    border: solid 5px var(--background-darker);
+}
+
+/* Style for button when focused */
+button:focus {
+    outline: none; /* Remove default focus outline */
+    box-shadow: 0 0 10px var(--background-lighter); 
+    background-color: var(--background); 
+    color: var(--background-darker);
+    border: solid 5px var(--background-darker);
+}
+
+/* Style for button when clicked */
+button:active {
+    background-color: var(--background-darker);
+}
+
+div#resultMessage{
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 1rem;
+    text-align: center;
+    margin: 1rem auto;
+    color: var(--text);
+    max-width: 50%;
+}
+
+footer{
+    max-width: 1000px;
+    background-color: var(--accent);
+    margin: auto;
+    padding: 1rem;
+    color: var(--background);
 }
